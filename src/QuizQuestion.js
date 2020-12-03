@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import QuizQuestionButton from "./QuizQuestionButton";
 
 class QuizQuestion extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class QuizQuestion extends Component {
         <section className="buttons">
           <ul>
             {this.props.quiz_question.answer_options.map((answer, idx) => (
-              <li key={answer}>{answer}</li>
+              <QuizQuestionButton key={answer} button_text={answer} />
             ))}
           </ul>
         </section>
