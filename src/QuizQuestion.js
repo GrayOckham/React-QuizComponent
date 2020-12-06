@@ -5,10 +5,11 @@ class QuizQuestion extends Component {
   constructor(props) {
     super(props);
   }
-  handleClick = (buttonText) =>
+  handleClick(buttonText) {
     buttonText === this.props.quiz_question.answer
       ? this.props.showNextQuestionHandler()
       : false;
+  }
   render() {
     return (
       <main>
